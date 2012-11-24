@@ -18,10 +18,10 @@
         return NO;
     
     ALAsset *otherAsset = (ALAsset *)other;
-    NSDictionary *selfUrls = [self valueForProperty:ALAssetPropertyURLs];
-    NSDictionary *otherUrls = [otherAsset valueForProperty:ALAssetPropertyURLs];
+    NSURL *selfUrls = [self valueForProperty:ALAssetPropertyAssetURL];
+    NSURL *otherUrls = [otherAsset valueForProperty:ALAssetPropertyAssetURL];
     
-    return [selfUrls isEqualToDictionary:otherUrls];
+    return [selfUrls isEqual:otherUrls];
 }
 
 @end
